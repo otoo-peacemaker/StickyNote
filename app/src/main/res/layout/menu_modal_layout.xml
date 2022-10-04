@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/yellow"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/yellow" />
+
+        <TextView
+            android:id="@+id/green"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/green" />
+
+        <TextView
+            android:id="@+id/pink"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/pink" />
+
+        <TextView
+            android:id="@+id/purple"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/purple" />
+
+        <TextView
+            android:id="@+id/blue"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/blue" />
+
+        <TextView
+            android:id="@+id/grey"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/grey" />
+
+        <TextView
+            android:id="@+id/charcoal"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/charcoal" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:drawablePadding="-200dp"
+        android:gravity="center"
+        android:text="@string/notes_list"
+        app:drawableStartCompat="@drawable/ic_sharp_list_alt_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:drawablePadding="-200dp"
+        android:gravity="center"
+        android:text="@string/delete_note"
+        app:drawableStartCompat="@drawable/ic_baseline_delete_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_background_color"
+        android:elevation="@dimen/_50sdp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:contentDescription="@string/add_note"
+                android:src="@drawable/ic_sharp_add_24" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_175sdp"
+                android:contentDescription="@string/no_internet"
+                android:src="@drawable/ic_sharp_warning_amber_24"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:contentDescription="@string/settings"
+                android:src="@drawable/ic_outline_settings_24" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:contentDescription="@string/close"
+                android:src="@drawable/ic_sharp_close_24" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="@string/sticky_notes"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/searchViewId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchViewId"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/search_field_background"
+        android:layoutDirection="rtl"
+        app:closeIcon="@null"
+        app:iconifiedByDefault="true"
+        app:layout_constraintBottom_toTopOf="@id/note_recycler_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:queryHint="Search.."
+        app:searchIcon="@drawable/ic_baseline_search_24" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/note_recycler_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchViewId"
+        tools:itemCount="10"
+        tools:listitem="@layout/note_list" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
